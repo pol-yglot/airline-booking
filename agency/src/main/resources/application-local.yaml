@@ -1,0 +1,14 @@
+spring:
+  config:
+    activate:
+      on-profile: local
+
+  thymeleaf:
+    cache: false
+
+server:
+  port: 8082
+
+logging:
+  level:
+    root: DEBUG

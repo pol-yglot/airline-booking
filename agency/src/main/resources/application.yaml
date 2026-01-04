@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: agency
+  devtools:
+    restart:
+      enabled: false
+  security:
+    user:
+      name: admin
+      password: admin123
+      roles: ADMIN
+
+  profiles:
+    active: local   # 기본 실행 환경 (IDE 실행 시)
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb;DB_CLOSE_ON_EXIT=FALSE;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
+  mvc:
+    view:
+      prefix: /templates/
+      suffix: .html
+
+  thymeleaf:
+    cache: false    # 개발 중엔 false (prod에서 true로 오버라이드)
+
+server:
+  port: 8082       # 기본 포트
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
