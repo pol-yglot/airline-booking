@@ -5,34 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fbf5ee5-5e00-48a4-9c09-5231e4d0658c" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/travel/agency/config/CorsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/travel/agency/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/travel/agency/controller/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/api/axios.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/api/main.api.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/main/MainPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/routes/Router.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/types/api.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/types/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/backend/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/backend/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/agency/AgencyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/travel/agency/AgencyApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/agency/controller/MainController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-local.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application-local.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/travel/agency/AgencyApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/travel/agency/AgencyApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/layout/FloatingSidebar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/layout/Footer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/layout/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/styles/floatingSidebar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/styles/footer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/styles/header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/styles/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/main/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/main/MainPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,16 +32,17 @@
         <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -84,7 +71,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.AgencyApplication.executor": "Run",
+    "Spring Boot.AgencyApplication.executor": "Debug",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
@@ -92,6 +79,7 @@
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/syyoo-workspace/airline-booking/agency/src/main/resources",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -162,7 +150,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1767515347469</updated>
-      <workItem from="1767527780910" duration="4756000" />
+      <workItem from="1767527780910" duration="5769000" />
+      <workItem from="1767956991528" duration="40000" />
+      <workItem from="1768109095224" duration="8895000" />
     </task>
     <servers />
   </component>

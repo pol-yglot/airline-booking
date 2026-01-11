@@ -1,0 +1,41 @@
+.floating-sidebar {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1000;
+}
+
+/* 공통 버튼 스타일 */
+.floating-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+}
+
+/* TOP 버튼 */
+.top-btn {
+    background-color: #ffffff;
+    color: #333;
+}
+
+.top-btn:hover {
+    background-color: #f2f2f2;
+}
+
+/* 챗봇 버튼 */
+.chatbot-btn {
+    background-color: #0064ff; /* 브랜드 컬러로 교체 가능 */
+    color: #ffffff;
+}
+
+.chatbot-btn:hover {
+    background-color: #0053d6;
+}

@@ -1,0 +1,167 @@
+/* ===== 공통 ===== */
+.main {
+    min-height: 100vh;
+    background-color: #f8fafc;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.hero-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 64px 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.hero-desc {
+    margin-top: 16px;
+    color: #4b5563;
+    font-size: 16px;
+}
+
+.hero-actions {
+    margin-top: 24px;
+    display: flex;
+    gap: 12px;
+}
+
+.btn-primary {
+    padding: 12px 24px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-outline {
+    padding: 12px 24px;
+    background-color: #ffffff;
+    color: #1f2937;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn-outline:hover {
+    background-color: #f3f4f6;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.server-message {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+/* ===== Feature Section ===== */
+.features {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 64px 24px;
+}
+
+.features-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 48px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.feature-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #4b5563;
+}
+
+/* ===== CTA Section ===== */
+.cta {
+    background-color: #0f172a;
+    color: #ffffff;
+}
+
+.cta-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 64px 24px;
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.cta-desc {
+    margin-top: 12px;
+    color: #cbd5f5;
+}
+
+.btn-cta {
+    margin-top: 24px;
+    padding: 14px 32px;
+    background-color: #ffffff;
+    color: #0f172a;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-cta:hover {
+    background-color: #e5e7eb;
+}
+
+/* ===== 반응형 ===== */
+@media (max-width: 768px) {
+    .hero-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}

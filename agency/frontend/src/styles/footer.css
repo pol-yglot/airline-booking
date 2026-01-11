@@ -1,0 +1,51 @@
+#footer {
+    background: #f8f9fb;
+    border-top: 1px solid #e5e7eb;
+    font-size: 13px;
+    color: #555;
+}
+
+#footer .inr {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.sns_list {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+}
+
+.sns_list a {
+    text-decoration: none;
+    color: #333;
+}
+
+.company_provision {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    padding: 16px 0;
+}
+
+.company_provision a {
+    text-decoration: none;
+    color: #333;
+}
+
+.footer_licensee {
+    margin: 8px 0;
+}
+
+.customer_center {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.copy {
+    margin-top: 16px;
+    font-size: 12px;
+    color: #888;
+}

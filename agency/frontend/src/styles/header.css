@@ -1,0 +1,61 @@
+#header {
+    border-bottom: 1px solid #e5e7eb;
+    background: #fff;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo a {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #111;
+}
+
+/* GNB */
+.gnb ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.gnb a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #333;
+}
+
+.gnb a:hover {
+    font-weight: 600;
+}
+
+/* Right menu */
+.header-util {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.header-util a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #333;
+}
+
+.header-util .signup {
+    padding: 8px 14px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-weight: 500;
+}
