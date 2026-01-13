@@ -18,10 +18,10 @@ const Footer = () => {
                 {/* 회사 정보 */}
                 <div className="company_info_wrap">
                     <ul className="company_provision">
-                        <li><a href="#">회사소개</a></li>
-                        <li><a href="#">이용약관</a></li>
-                        <li><a href="#"><strong>개인정보처리방침</strong></a></li>
-                        <li><a href="#">여행약관</a></li>
+                        <li><a href="/company-introduction">회사소개</a></li>
+                        <li><a href="/privacy-policy">이용약관</a></li>
+                        <li><a href="/terms-of-service"><strong>개인정보처리방침</strong></a></li>
+                        <li><a href="/travel-terms">여행약관</a></li>
                     </ul>
 
                     <address className="footer_licensee">

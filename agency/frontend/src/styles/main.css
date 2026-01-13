@@ -15,8 +15,8 @@
     max-width: 1120px;
     margin: 0 auto;
     padding: 64px 24px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    #grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: center;
 }
@@ -154,14 +154,76 @@
 .btn-cta:hover {
     background-color: #e5e7eb;
 }
+/* ===========================================
+   Login Page – BizTrip Hero Layout Extension
+   =========================================== */
 
-/* ===== 반응형 ===== */
-@media (max-width: 768px) {
-    .hero-inner {
-        grid-template-columns: 1fr;
-    }
+/* Hero 내부를 좌우 2단 레이아웃으로 분리 */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 420px;   /* 좌측 텍스트 / 우측 로그인 카드 */
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+}
 
-    .feature-grid {
+/* 모바일 대응 */
+@media (max-width: 1024px) {
+    .hero-grid {
         grid-template-columns: 1fr;
+        gap: 40px;
     }
+}
+
+/* 로그인 폼 카드 영역 */
+.hero-form {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* 로그인 폼 */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* 입력 그룹 */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* 라벨 */
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+/* 인풋 */
+.form-group input {
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+/* 포커스 효과 */
+.form-group input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* 로그인 버튼 */
+.login-form .btn-primary {
+    margin-top: 10px;
+    height: 48px;
+    font-size: 16px;
 }
