@@ -12,7 +12,7 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "http://localhost:5174", allowCredentials = "true", maxAge = 3600)
 public class MainController {
 
     /**

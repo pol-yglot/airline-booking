@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.travel.agency.mapper.CustomerMapper">
+
+  <!-- 고객사 ResultMap -->
+  <resultMap id="CustomerResultMap" type="com.travel.agency.entity.Customer">
+    <id column="customer_id" property="customerId"/>
+    <result column="company_name" property="companyName"/>
+    <result column="business_number" property="businessNumber"/>
+    <result column="company_type" property="companyType"/>
+    <result column="industry" property="industry"/>
+    <result column="employee_count" property="employeeCount"/>
+    <result column="status" property="status"/>
+    <result column="created_at" property="createdAt"/>
+    <result column="updated_at" property="updatedAt"/>
+  </resultMap>
+
+  <!-- 모든 고객사 조회 -->
+  <select id="selectAll" resultMap="CustomerResultMap">
+    SELECT * FROM customer
+    ORDER BY customer_id DESC
+  </select>
+
+  <!-- 고객사 ID로 조회 -->
+  <select id="selectById" parameterType="Long" resultMap="CustomerResultMap">
+    SELECT * FROM customer
+    WHERE customer_id = #{customerId}
+  </select>
+
+  <!-- 사업자번호로 조회 -->
+  <select id="selectByBusinessNumber" parameterType="String" resultMap="CustomerResultMap">
+    SELECT * FROM customer
+    WHERE business_number = #{businessNumber}
+  </select>
+
+  <!-- 고객사 등록 -->
+  <insert id="insert" parameterType="com.travel.agency.entity.Customer" useGeneratedKeys="true" keyProperty="customerId">
+    INSERT INTO customer (company_name, business_number, company_type, industry, employee_count, status, created_at, updated_at)
+    VALUES (#{companyName}, #{businessNumber}, #{companyType}, #{industry}, #{employeeCount}, #{status}, NOW(), NOW())
+  </insert>
+
+  <!-- 고객사 수정 -->
+  <update id="update" parameterType="com.travel.agency.entity.Customer">
+    UPDATE customer
+    SET company_name = #{companyName},
+        business_number = #{businessNumber},
+        company_type = #{companyType},
+        industry = #{industry},
+        employee_count = #{employeeCount},
+        status = #{status},
+        updated_at = NOW()
+    WHERE customer_id = #{customerId}
+  </update>
+
+  <!-- 고객사 삭제 -->
+  <delete id="delete" parameterType="Long">
+    DELETE FROM customer
+    WHERE customer_id = #{customerId}
+  </delete>
+
+</mapper>

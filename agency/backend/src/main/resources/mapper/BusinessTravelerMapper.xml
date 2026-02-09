@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.travel.agency.mapper.BusinessTravelerMapper">
+
+  <!-- 출장자 ResultMap -->
+  <resultMap id="BusinessTravelerResultMap" type="com.travel.agency.entity.BusinessTraveler">
+    <id column="traveler_id" property="travelerId"/>
+    <result column="customer_id" property="customerId"/>
+    <result column="name" property="name"/>
+    <result column="email" property="email"/>
+    <result column="phone" property="phone"/>
+    <result column="position" property="position"/>
+    <result column="travel_grade" property="travelGrade"/>
+    <result column="active_yn" property="activeYn"/>
+    <result column="created_at" property="createdAt"/>
+    <result column="updated_at" property="updatedAt"/>
+  </resultMap>
+
+  <!-- 고객사별 출장자 조회 -->
+  <select id="selectByCustomerId" parameterType="Long" resultMap="BusinessTravelerResultMap">
+    SELECT * FROM business_traveler
+    WHERE customer_id = #{customerId}
+    ORDER BY traveler_id
+  </select>
+
+  <!-- 활성화된 출장자만 조회 -->
+  <select id="selectActiveByCustomerId" parameterType="Long" resultMap="BusinessTravelerResultMap">
+    SELECT * FROM business_traveler
+    WHERE customer_id = #{customerId} AND active_yn = 'Y'
+    ORDER BY traveler_id
+  </select>
+
+  <!-- 출장자 ID로 조회 -->
+  <select id="selectById" parameterType="Long" resultMap="BusinessTravelerResultMap">
+    SELECT * FROM business_traveler
+    WHERE traveler_id = #{travelerId}
+  </select>
+
+  <!-- 이메일로 조회 -->
+  <select id="selectByEmail" parameterType="String" resultMap="BusinessTravelerResultMap">
+    SELECT * FROM business_traveler
+    WHERE email = #{email}
+  </select>
+
+  <!-- 출장자 등록 -->
+  <insert id="insert" parameterType="com.travel.agency.entity.BusinessTraveler" useGeneratedKeys="true" keyProperty="travelerId">
+    INSERT INTO business_traveler (customer_id, name, email, phone, position, travel_grade, active_yn, created_at, updated_at)
+    VALUES (#{customerId}, #{name}, #{email}, #{phone}, #{position}, #{travelGrade}, #{activeYn}, NOW(), NOW())
+  </insert>
+
+  <!-- 출장자 수정 -->
+  <update id="update" parameterType="com.travel.agency.entity.BusinessTraveler">
+    UPDATE business_traveler
+    SET name = #{name},
+        email = #{email},
+        phone = #{phone},
+        position = #{position},
+        travel_grade = #{travelGrade},
+        active_yn = #{activeYn},
+        updated_at = NOW()
+    WHERE traveler_id = #{travelerId}
+  </update>
+
+  <!-- 출장자 삭제 -->
+  <delete id="delete" parameterType="Long">
+    DELETE FROM business_traveler
+    WHERE traveler_id = #{travelerId}
+  </delete>
+
+</mapper>

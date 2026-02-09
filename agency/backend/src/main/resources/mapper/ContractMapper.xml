@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.travel.agency.mapper.ContractMapper">
+
+  <!-- 계약 ResultMap -->
+  <resultMap id="ContractResultMap" type="com.travel.agency.entity.Contract">
+    <id column="contract_id" property="contractId"/>
+    <result column="customer_id" property="customerId"/>
+    <result column="start_date" property="startDate"/>
+    <result column="end_date" property="endDate"/>
+    <result column="contract_type" property="contractType"/>
+    <result column="discount_rate" property="discountRate"/>
+    <result column="billing_cycle" property="billingCycle"/>
+    <result column="credit_limit" property="creditLimit"/>
+    <result column="created_at" property="createdAt"/>
+    <result column="updated_at" property="updatedAt"/>
+  </resultMap>
+
+  <!-- 고객사별 계약 조회 -->
+  <select id="selectByCustomerId" parameterType="Long" resultMap="ContractResultMap">
+    SELECT * FROM contract
+    WHERE customer_id = #{customerId}
+    ORDER BY contract_id DESC
+  </select>
+
+  <!-- 계약 ID로 조회 -->
+  <select id="selectById" parameterType="Long" resultMap="ContractResultMap">
+    SELECT * FROM contract
+    WHERE contract_id = #{contractId}
+  </select>
+
+  <!-- 고객사의 활성 계약 조회 (현재 날짜 기준) -->
+  <select id="selectActiveContractByCustomerId" parameterType="Long" resultMap="ContractResultMap">
+    SELECT * FROM contract
+    WHERE customer_id = #{customerId}
+      AND start_date &lt;= CURDATE()
+      AND end_date >= CURDATE()
+    ORDER BY contract_id DESC
+    LIMIT 1
+  </select>
+
+  <!-- 계약 등록 -->
+  <insert id="insert" parameterType="com.travel.agency.entity.Contract" useGeneratedKeys="true" keyProperty="contractId">
+    INSERT INTO contract (customer_id, start_date, end_date, contract_type, discount_rate, billing_cycle, credit_limit, created_at, updated_at)
+    VALUES (#{customerId}, #{startDate}, #{endDate}, #{contractType}, #{discountRate}, #{billingCycle}, #{creditLimit}, NOW(), NOW())
+  </insert>
+
+  <!-- 계약 수정 -->
+  <update id="update" parameterType="com.travel.agency.entity.Contract">
+    UPDATE contract
+    SET start_date = #{startDate},
+        end_date = #{endDate},
+        contract_type = #{contractType},
+        discount_rate = #{discountRate},
+        billing_cycle = #{billingCycle},
+        credit_limit = #{creditLimit},
+        updated_at = NOW()
+    WHERE contract_id = #{contractId}
+  </update>
+
+  <!-- 계약 삭제 -->
+  <delete id="delete" parameterType="Long">
+    DELETE FROM contract
+    WHERE contract_id = #{contractId}
+  </delete>
+
+</mapper>

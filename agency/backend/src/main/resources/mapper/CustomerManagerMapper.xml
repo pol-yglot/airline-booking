@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.travel.agency.mapper.CustomerManagerMapper">
+
+  <!-- 담당자 ResultMap -->
+  <resultMap id="CustomerManagerResultMap" type="com.travel.agency.entity.CustomerManager">
+    <id column="manager_id" property="managerId"/>
+    <result column="customer_id" property="customerId"/>
+    <result column="name" property="name"/>
+    <result column="email" property="email"/>
+    <result column="phone" property="phone"/>
+    <result column="department" property="department"/>
+    <result column="position" property="position"/>
+    <result column="main_yn" property="mainYn"/>
+    <result column="created_at" property="createdAt"/>
+    <result column="updated_at" property="updatedAt"/>
+  </resultMap>
+
+  <!-- 고객사별 담당자 조회 -->
+  <select id="selectByCustomerId" parameterType="Long" resultMap="CustomerManagerResultMap">
+    SELECT * FROM customer_manager
+    WHERE customer_id = #{customerId}
+    ORDER BY main_yn DESC, manager_id
+  </select>
+
+  <!-- 담당자 ID로 조회 -->
+  <select id="selectById" parameterType="Long" resultMap="CustomerManagerResultMap">
+    SELECT * FROM customer_manager
+    WHERE manager_id = #{managerId}
+  </select>
+
+  <!-- 이메일로 조회 -->
+  <select id="selectByEmail" parameterType="String" resultMap="CustomerManagerResultMap">
+    SELECT * FROM customer_manager
+    WHERE email = #{email}
+  </select>
+
+  <!-- 담당자 등록 -->
+  <insert id="insert" parameterType="com.travel.agency.entity.CustomerManager" useGeneratedKeys="true" keyProperty="managerId">
+    INSERT INTO customer_manager (customer_id, name, email, phone, department, position, main_yn, created_at, updated_at)
+    VALUES (#{customerId}, #{name}, #{email}, #{phone}, #{department}, #{position}, #{mainYn}, NOW(), NOW())
+  </insert>
+
+  <!-- 담당자 수정 -->
+  <update id="update" parameterType="com.travel.agency.entity.CustomerManager">
+    UPDATE customer_manager
+    SET name = #{name},
+        email = #{email},
+        phone = #{phone},
+        department = #{department},
+        position = #{position},
+        main_yn = #{mainYn},
+        updated_at = NOW()
+    WHERE manager_id = #{managerId}
+  </update>
+
+  <!-- 담당자 삭제 -->
+  <delete id="delete" parameterType="Long">
+    DELETE FROM customer_manager
+    WHERE manager_id = #{managerId}
+  </delete>
+
+</mapper>

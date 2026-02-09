@@ -20,13 +20,21 @@ spring:
   #db settings
   datasource:
     driver-class-name: org.h2.Driver #temp db
-    url: jdbc:h2:mem:testdb;DB_CLOSE_ON_EXIT=FALSE;DB_CLOSE_DELAY=-1
+    url: jdbc:h2:mem:testdb;DB_CLOSE_ON_EXIT=FALSE;DB_CLOSE_DELAY=-1;INIT=RUNSCRIPT FROM 'classpath:schema.sql'
     username: sa
     password:
   h2:
     console:
       enabled: true
       path: /h2-console
+
+  #springdoc swagger settings
+  springdoc:
+    api-docs:
+      path: /v3/api-docs
+    swagger-ui:
+      path: /swagger-ui.html
+      enabled: true
 
   #webview settings
   mvc:
@@ -36,6 +44,13 @@ spring:
 
   thymeleaf:
     cache: false    # 개발 중엔 false (prod에서 true로 오버라이드)
+
+  #mybatis settings
+  mybatis:
+    mapper-locations: classpath:mapper/*.xml
+    configuration:
+      map-underscore-to-camel-case: true
+      jdbc-type-for-null: null
 
   #jpa settings
   jpa:
@@ -47,6 +62,11 @@ spring:
 #server settings
 server:
   port: 8082
+
+#jwt settings
+jwt:
+  secret: MySecretKeyForJWTTokenGenerationAndValidationPurpose12345
+  expiration: 1800000
 
 #log settings
 logging:
