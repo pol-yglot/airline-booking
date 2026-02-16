@@ -16,7 +16,6 @@
     margin: 0 auto;
     padding: 64px 24px;
     display: flex;
-    #grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: center;
 }
