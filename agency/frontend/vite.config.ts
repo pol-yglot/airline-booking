@@ -3,11 +3,10 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig(({ mode }) => {
-    // mode: local | dev | prod
-    const env = loadEnv(mode, process.cwd(), '');
-    const isProd = mode === 'prod';
+    // mode: local | development | production
+    const env = loadEnv(mode, process.cwd(), 'VITE_'); // ✅ prefix 적용
+    const isProd = mode === 'production'; // ✅ prod 모드 체크
 
-    // ✅ 빌드/개발 서버 시작 시 env 확인
     console.log('===============================');
     console.log('MODE        :', mode);
     console.log('API_BASE    :', env.VITE_API_BASE_URL);
@@ -32,5 +31,8 @@ export default defineConfig(({ mode }) => {
                     },
                 },
             },
+        define: {
+            'process.env': env,
+        },
     };
 });
