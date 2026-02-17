@@ -17,7 +17,7 @@ interface Continent {
 const continents: Continent[] = [
     {
         name: "Asia",
-        img: "../../public/test1.jpg",
+        img: "test1.jpg",
         places: [
             { continent: "Asia", name: "상하이 디즈니랜드", city: "상하이", rating: 4.7, reviews: 288963 },
             // 추가 아시아 장소 url(../../public/test1.jpg);
@@ -25,7 +25,7 @@ const continents: Continent[] = [
     },
     {
         name: "Europe",
-        img: "../../public/test2.jpg",
+        img: "test2.jpg",
         places: [
             { continent: "Europe", name: "에든버러 캐슬", city: "에든버러", rating: 4.7, reviews: 2536 },
             // 추가 유럽 장소
@@ -33,21 +33,21 @@ const continents: Continent[] = [
     },
     {
         name: "America",
-        img: "../../public/test3.jpg",
+        img: "test3.jpg",
         places: [
             { continent: "America", name: "자유의 여신상", city: "뉴욕", rating: 4.6, reviews: 45123 },
         ],
     },
     {
         name: "Africa",
-        img: "../../public/test4.jpg",
+        img: "test4.jpg",
         places: [
             { continent: "Africa", name: "피라미드", city: "카이로", rating: 4.9, reviews: 8923 },
         ],
     },
     {
         name: "Oceania",
-        img: "../../public/test5.jpg",
+        img: "test5.jpg",
         places: [
             { continent: "Oceania", name: "오페라 하우스", city: "시드니", rating: 4.8, reviews: 2345 },
         ],
