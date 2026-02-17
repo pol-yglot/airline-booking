@@ -4,7 +4,7 @@ import path from 'path';
 
 export default defineConfig(({ mode }) => {
     // mode: local | dev | prod
-    const env = loadEnv(mode, process.cwd());
+    const env = loadEnv(mode, process.cwd(), '');
     const isProd = mode === 'prod';
 
     // ✅ 빌드/개발 서버 시작 시 env 확인
