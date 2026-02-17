@@ -226,3 +226,222 @@
     height: 48px;
     font-size: 16px;
 }
+
+.flight-search-section {
+    padding: 30px 20px;
+    background: #f5f7fa;
+}
+
+.flight-search-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 164px;
+    /*margin: 0 auto;*/
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+}
+
+.flight-search-bar input[type="text"] {
+    flex: 2;
+    min-width: 200px;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+}
+
+.flight-search-bar .date-picker {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.flight-search-bar .date-picker input[type="date"] {
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+}
+
+.flight-search-bar .stay-night {
+    font-weight: 600;
+}
+
+.flight-search-bar select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+}
+
+.flight-search-bar button {
+    padding: 10px 20px;
+    background-color: #1d4ed8;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.flight-search-bar button:hover {
+    background-color: #2563eb;
+}
+
+.room-selector {
+    position: relative;
+    width: 220px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.summary {
+    border: 1px solid #d1d5db;
+    padding: 8px 12px;
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+
+.arrow {
+    font-size: 12px;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-size: 13px;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    margin-top: 4px;
+    padding: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.item:last-child {
+    margin-bottom: 0;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.controls button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1d4ed8;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #d1d5db;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+}
+
+.controls span {
+    min-width: 20px;
+    text-align: center;
+}
+
+.confirm-btn {
+    width: 100%;
+    padding: 8px 0;
+    background-color: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.continent-grid-section{
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 64px 24px;
+}
+
+/* 대륙 전체 그리드: 5칸 고정 */
+.continent-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    height: 400px;
+}
+
+/* 각 대륙 카드 */
+.continent-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-image: url(../../public/test1.jpg);
+    color: white;
+}
+
+/* 대륙 제목 */
+.continent-title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* 각 대륙 안의 장소 그리드 (flex로 유동 배치) */
+.places-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
+    top: 200px;
+    justify-content: center;
+}
+
+/* 장소 카드 */
+.place-card {
+    width: 120px;
+    /*border: 1px solid #ccc;
+    border-radius: 6px;*/
+    overflow: hidden;
+    text-align: center;
+}
+
+.place-card img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+}
+
+.place-card .info {
+    padding: 5px;
+    font-size: 0.8rem;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+    .flight-search-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .flight-search-bar .date-picker {
+        justify-content: space-between;
+    }
+}

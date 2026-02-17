@@ -29,19 +29,23 @@ const Header = () => {
                     <nav className="gnb">
                         <ul>
                             {/* AI 고객여정 */}
-                            <li><a href="/ai-journey">AI 고객여정</a></li>
+                            <li><a href="/ai-journey">숙박</a></li>
 
                             {/* 출장 신청 */}
-                            <li><a href="/trip-application">출장 신청</a></li>
+                            <li><a href="/trip-application">호텔</a></li>
 
                             {/* 출장 관리 */}
-                            <li><a href="/trip-management">출장 관리</a></li>
+                            <li><a href="/trip-management">항공권+숙박</a></li>
 
                             {/* 정산 · 리포트 */}
-                            <li><a href="/settlement-report">정산 · 리포트</a></li>
+                            <li><a href="/settlement-report">액티비티</a></li>
 
                             {/* 고객센터 */}
-                            <li><a href="/customer-center">고객센터</a></li>
+                            <li><a href="/customer-center">식당예약</a></li>
+
+                            {/* 고객센터 */}
+                            <li><a href="/customer-center">짐맡기기 서비스</a></li>
+
                         </ul>
                     </nav>
                 )}

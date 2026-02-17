@@ -22,6 +22,7 @@ const Footer = () => {
                         <li><a href="/privacy-policy">이용약관</a></li>
                         <li><a href="/terms-of-service"><strong>개인정보처리방침</strong></a></li>
                         <li><a href="/travel-terms">여행약관</a></li>
+                        <li><a href="/travel-terms">환불규정</a></li>
                     </ul>
 
                     <address className="footer_licensee">
@@ -34,7 +35,7 @@ const Footer = () => {
                     </p>
 
                     <p className="customer_center">
-                        고객센터 1577-1233 / 해외항공권문의 1899-1833
+                        고객센터 1577-1233 / 해외항공권문의 1899-1833 / 전화상담시간 평일 09:00 ~ 18:00
                     </p>
 
                     <p className="copy">
