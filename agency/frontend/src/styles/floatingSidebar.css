@@ -39,3 +39,47 @@
 .chatbot-btn:hover {
     background-color: #0053d6;
 }
+/* 태블릿 이하: 1024px 이하 */
+@media (max-width: 1024px) {
+    .floating-sidebar {
+        right: 16px;
+        bottom: 16px;
+        gap: 10px;
+    }
+
+    .floating-btn {
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+    }
+}
+
+/* 모바일: 768px 이하 */
+@media (max-width: 768px) {
+    .floating-sidebar {
+        right: 12px;
+        bottom: 12px;
+        gap: 8px;
+    }
+
+    .floating-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 16px;
+    }
+}
+
+/* 초소형 모바일: 480px 이하 */
+@media (max-width: 480px) {
+    .floating-sidebar {
+        right: 8px;
+        bottom: 8px;
+        gap: 6px;
+    }
+
+    .floating-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+}

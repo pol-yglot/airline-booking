@@ -59,3 +59,75 @@
     border-radius: 4px;
     font-weight: 500;
 }
+
+/* Header 반응형 */
+@media (max-width: 1024px) {
+    .header-inner {
+        padding: 0 16px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    /* 로고 크기 조정 */
+    .logo a {
+        font-size: 18px;
+    }
+
+    /* GNB 메뉴 줄이기 */
+    .gnb ul {
+        gap: 20px;
+    }
+}
+
+/* 모바일: 768px 이하 */
+@media (max-width: 768px) {
+    .header-inner {
+        justify-content: space-between;
+    }
+
+    /* GNB 숨기고 햄버거 메뉴 자리 마련 */
+    .gnb {
+        display: none;  /* 실제 메뉴 토글 JS와 연결 가능 */
+    }
+
+    /* 로고 크기 조정 */
+    .logo a {
+        font-size: 16px;
+    }
+
+    /* 우측 메뉴 간격 조정 */
+    .header-util {
+        gap: 12px;
+    }
+
+    .header-util a,
+    .header-util .signup {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+}
+
+/* 초소형 모바일: 480px 이하 */
+@media (max-width: 480px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .logo a {
+        font-size: 16px;
+    }
+
+    .header-util {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+
+    .header-util a,
+    .header-util .signup {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}

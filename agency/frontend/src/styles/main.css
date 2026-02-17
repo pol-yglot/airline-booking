@@ -153,25 +153,16 @@
 .btn-cta:hover {
     background-color: #e5e7eb;
 }
+
 /* ===========================================
    Login Page – BizTrip Hero Layout Extension
    =========================================== */
-
-/* Hero 내부를 좌우 2단 레이아웃으로 분리 */
 .hero-grid {
     display: grid;
-    grid-template-columns: 1fr 420px;   /* 좌측 텍스트 / 우측 로그인 카드 */
+    grid-template-columns: 1fr 420px;
     align-items: center;
     gap: 60px;
     width: 100%;
-}
-
-/* 모바일 대응 */
-@media (max-width: 1024px) {
-    .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
 }
 
 /* 로그인 폼 카드 영역 */
@@ -196,14 +187,12 @@
     gap: 6px;
 }
 
-/* 라벨 */
 .form-group label {
     font-size: 14px;
     font-weight: 600;
     color: #1f2937;
 }
 
-/* 인풋 */
 .form-group input {
     height: 44px;
     padding: 0 14px;
@@ -213,20 +202,19 @@
     transition: all 0.2s ease;
 }
 
-/* 포커스 효과 */
 .form-group input:focus {
     outline: none;
     border-color: #2563eb;
     box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
 }
 
-/* 로그인 버튼 */
 .login-form .btn-primary {
     margin-top: 10px;
     height: 48px;
     font-size: 16px;
 }
 
+/* ===== Flight Search ===== */
 .flight-search-section {
     padding: 30px 20px;
     background: #f5f7fa;
@@ -239,12 +227,17 @@
     align-items: center;
     justify-content: center;
     max-width: 1200px;
-    margin: 0 164px;
-    /*margin: 0 auto;*/
+    margin: 0 auto;
     padding: 15px;
     background: #fff;
     border: 1px solid #d1d5db;
     border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.flight-search-bar * {
+    box-sizing: border-box; /* padding 포함 폭 계산 */
 }
 
 .flight-search-bar input[type="text"] {
@@ -291,6 +284,7 @@
     background-color: #2563eb;
 }
 
+/* room selector */
 .room-selector {
     position: relative;
     width: 220px;
@@ -374,13 +368,15 @@
     font-weight: 500;
 }
 
-.continent-grid-section{
+/* ===========================================
+   Continent Section
+   =========================================== */
+.continent-grid-section {
     max-width: 1120px;
     margin: 0 auto;
     padding: 64px 24px;
 }
 
-/* 대륙 전체 그리드: 5칸 고정 */
 .continent-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -388,7 +384,6 @@
     height: 400px;
 }
 
-/* 각 대륙 카드 */
 .continent-card {
     border: 1px solid #e0e0e0;
     border-radius: 8px;
@@ -396,7 +391,6 @@
     color: white;
 }
 
-/* 대륙 제목 */
 .continent-title {
     text-align: center;
     margin-bottom: 10px;
@@ -404,7 +398,6 @@
     font-weight: bold;
 }
 
-/* 각 대륙 안의 장소 그리드 (flex로 유동 배치) */
 .places-grid {
     display: flex;
     flex-wrap: wrap;
@@ -414,11 +407,8 @@
     justify-content: center;
 }
 
-/* 장소 카드 */
 .place-card {
     width: 120px;
-    /*border: 1px solid #ccc;
-    border-radius: 6px;*/
     overflow: hidden;
     text-align: center;
 }
@@ -434,14 +424,162 @@
     font-size: 0.8rem;
 }
 
-/* 반응형 */
+/* ======================
+   반응형
+   ====================== */
+
+/* Hero 반응형 */
+@media (max-width: 768px) {
+    .hero-inner {
+        flex-direction: column;
+        padding: 40px 16px;
+        gap: 24px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .hero-desc {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .hero-form {
+        padding: 24px;
+    }
+}
+
+/* Feature Section */
+@media (max-width: 768px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .features-title {
+        font-size: 24px;
+    }
+}
+
+/* Flight Search Section */
+@media (max-width: 1024px) {
+    .flight-search-bar {
+        margin: 0 20px;
+        gap: 8px;
+    }
+
+    .flight-search-bar input[type="text"] {
+        min-width: 150px;
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+}
+
 @media (max-width: 768px) {
     .flight-search-bar {
         flex-direction: column;
         align-items: stretch;
+        margin: 0 12px;
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .flight-search-bar input[type="text"],
+    .flight-search-bar select,
+    .flight-search-bar button {
+        width: 100%;
+        min-width: 0;
+        flex: unset;
+    }
+
+    .flight-search-bar input[type="text"] {
+        padding: 10px;
+        font-size: 14px;
     }
 
     .flight-search-bar .date-picker {
-        justify-content: space-between;
+        flex-direction: column;
+        gap: 6px;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 480px) {
+    .flight-search-bar {
+        margin: 0 8px;
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .flight-search-bar input[type="text"],
+    .flight-search-bar select,
+    .flight-search-bar button {
+        width: 100%;
+    }
+
+    .flight-search-bar input[type="text"] {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .flight-search-bar .date-picker {
+        flex-direction: column;
+        gap: 8px;
+        align-items: stretch;
+    }
+}
+
+/* Continent Grid */
+@media (max-width: 768px) {
+    .continent-grid {
+        grid-template-columns: repeat(2, 1fr);
+        height: auto;
+    }
+
+    .places-grid {
+        top: auto;
+        gap: 8px;
+    }
+
+    .place-card {
+        width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .continent-grid {
+        grid-template-columns: 1fr;
+        padding: 32px 16px;
+    }
+
+    .place-card {
+        width: 90px;
+    }
+
+    .continent-title {
+        font-size: 1rem;
+    }
+}
+
+/* 로그인 버튼 full width */
+@media (max-width: 480px) {
+    .login-form .btn-primary {
+        width: 100%;
     }
 }

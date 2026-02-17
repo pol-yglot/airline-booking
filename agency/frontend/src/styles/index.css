@@ -66,3 +66,47 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+/* 태블릿 이하: 1024px 이하 */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 2.8em;
+    }
+
+    button {
+        padding: 0.5em 1em;
+        font-size: 0.95em;
+    }
+}
+
+/* 모바일: 768px 이하 */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        place-items: stretch;
+    }
+
+    h1 {
+        font-size: 2.2em;
+        text-align: center;
+    }
+
+    button {
+        width: 100%;
+        padding: 0.5em 0.8em;
+        font-size: 0.9em;
+    }
+}
+
+/* 초소형 모바일: 480px 이하 */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    button {
+        padding: 0.4em 0.6em;
+        font-size: 0.85em;
+    }
+}

@@ -49,3 +49,67 @@
     font-size: 12px;
     color: #888;
 }
+/* 태블릿 이하: 1024px 이하 */
+@media (max-width: 1024px) {
+    #footer .inr {
+        padding: 32px 16px;
+    }
+
+    .sns_list,
+    .company_provision {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .company_provision {
+        padding: 12px 0;
+    }
+}
+
+/* 모바일: 768px 이하 */
+@media (max-width: 768px) {
+    #footer .inr {
+        padding: 24px 12px;
+    }
+
+    .sns_list a,
+    .company_provision a {
+        font-size: 12px;
+    }
+
+    .footer_licensee {
+        font-size: 12px;
+    }
+
+    .customer_center {
+        font-size: 13px;
+    }
+
+    .copy {
+        font-size: 11px;
+    }
+}
+
+/* 초소형 모바일: 480px 이하 */
+@media (max-width: 480px) {
+    #footer .inr {
+        padding: 16px 8px;
+    }
+
+    .sns_list,
+    .company_provision {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .sns_list a,
+    .company_provision a {
+        font-size: 11px;
+    }
+
+    .footer_licensee,
+    .customer_center,
+    .copy {
+        font-size: 10px;
+    }
+}
