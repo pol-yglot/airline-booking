@@ -7,6 +7,13 @@ export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, process.cwd());
     const isProd = mode === 'prod';
 
+    // ✅ 빌드/개발 서버 시작 시 env 확인
+    console.log('===============================');
+    console.log('MODE        :', mode);
+    console.log('API_BASE    :', env.VITE_API_BASE_URL);
+    console.log('PROXY_TARGET:', env.VITE_API_PROXY_TARGET);
+    console.log('===============================');
+
     return {
         plugins: [react()],
         resolve: {

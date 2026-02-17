@@ -1,3 +1,4 @@
+import {useEffect} from "react";
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import MainPage from "./pages/main/MainPage.tsx";
 import AIJourneyPage from "./pages/ai-journey/AIJourneyPage.tsx";
@@ -16,6 +17,15 @@ import MyPage from "./pages/mypage/MyPage.tsx";
 
 // 여기에서 api와 화면을 매핑한다.
 function App() {
+    useEffect(() => {
+        console.log('--- CURRENT ENV VARIABLES ---');
+        console.log('VITE_API_BASE_URL      :', import.meta.env.VITE_API_BASE_URL);
+        console.log('VITE_API_PROXY_TARGET  :', import.meta.env.VITE_API_PROXY_TARGET);
+        console.log('MODE (NODE_ENV)        :', import.meta.env.MODE);
+        console.log('PROD?', import.meta.env.PROD);
+        console.log('-----------------------------');
+    }, []);
+
     return (
         <BrowserRouter>
             <Routes>
