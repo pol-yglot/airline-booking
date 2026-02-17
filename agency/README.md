@@ -197,3 +197,14 @@ GET http://localhost:8082/api/customers/1/travel-policy
 ### 계정 
 - ID : admin
 - PW : admin123
+
+### 서버정보 
+```
+nslookup chamitour.kr
+Server:         127.0.0.53
+Address:        127.0.0.53#53
+
+Non-authoritative answer:
+Name:   chamitour.kr
+Address: 139.150.11.208
+```

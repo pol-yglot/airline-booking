@@ -4,6 +4,11 @@ backend/.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+### env
+.env*
+application-prod.yml
+
+
 ### STS ###
 .apt_generated
 .classpath
@@ -14,7 +19,8 @@ backend/.mvn/wrapper/maven-wrapper.jar
 .sts4-cache
 
 ### IntelliJ IDEA ###
-backend/.idea
+agency/.idea/**
+backend/.idea/**
 *.iws
 *.iml
 *.ipr
