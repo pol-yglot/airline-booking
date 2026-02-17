@@ -19,8 +19,7 @@ application-prod.yml
 .sts4-cache
 
 ### IntelliJ IDEA ###
-agency/.idea/**
-backend/.idea/**
+.idea/
 *.iws
 *.iml
 *.ipr

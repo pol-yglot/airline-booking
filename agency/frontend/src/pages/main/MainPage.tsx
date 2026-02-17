@@ -89,7 +89,7 @@ const MainPage = () => {
                         </button>
                     </div>
                 </section>
-                
+
                 {/* Features */}
                 <section className="features">
                     <h2 className="features-title">
